@@ -1,39 +1,80 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import '@picocss/pico/css/pico.min.css';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+	<div class="min-header">
+		<button id="theme-switcher" class="toggle-btn secondary"><i class="fa fa-moon-o" aria-hidden="true"></i>	</button>
+	</div>
+	<main class="container">
+
+
+
+		<nav>
+			<ul>
+			  <li>
+				<a href="#" class="secondary">
+					<i class="fa fa-bars" aria-hidden="true"></i>
+			  	</a>
+			  </li>
+			</ul>
+			<ul>
+			  <li><strong> <span class="text-gradient">Emmanuel J. Gonzalez Morales</span> </strong></li>
+			</ul>
+			<ul>
+			  <li><a href="#" class="secondary"><i class="fa fa-linkedin" aria-hidden="true"></i>
+			  </a></li>
+			</ul>
+			
+		  </nav>
+
+		
+		<h3 class="sub-title"><span class="text-gradient">Education</span></h3>
+		<p class="info-container"> 
+			University of Puerto Rico Mayaguez Campus
 		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+
+		<h3 class="sub-title"><span class="text-gradient">Skills</span></h3>
+		
+		<article></article>
+
+		<h3 class="sub-title"><span class="text-gradient">Experience</span></h3>
+		
+		<article>L3Harris</article>
+		<article>RUMBus</article>
+		<article>Puerto Rico Seismic Network</article>
+		<article>PVBot Research</article>
+		<article>Game Development Research</article>
+		
+	
+		<h3 class="sub-title"><span class="text-gradient">Projects</span></h3>
+		
+		<article>Google Tech Exchange SDS Group Project</article>
+		<article>Random Poller</article>
+		<article>Huffman Encoding</article>
+
+
+		<h3 class="sub-title"><span class="text-gradient">Achievements</span></h3>
+		<article></article>
+		<article></article>
+
 	</main>
 </Layout>
+
+<script>
+	const themeSwitcher = document.getElementById('theme-switcher');
+	const body = document.body;
+
+	themeSwitcher?.addEventListener('click', () => {
+		if (body.getAttribute('data-theme') === 'light') {
+		body.setAttribute('data-theme', 'dark');
+		} else {
+		body.setAttribute('data-theme', 'light');
+		}
+	});
+</script>
 
 <style>
 	main {
@@ -46,6 +87,34 @@ import Card from '../components/Card.astro';
 		font-weight: 800;
 		margin: 0;
 	}
+
+	.sub-title{
+		margin-top: 20px;
+	}
+
+	.min-header{
+		display: flex;
+		background-color: #1d2a33;
+		height: 40px;
+		justify-content: end;
+		
+	}
+
+	.toggle-btn{
+		display: flex;
+		margin-right: 30px;
+		justify-content: center;
+		width: 30px;
+		height: 30px;
+		margin-top: 5px;
+		align-items: center;
+		border-radius: 80px;
+	}
+
+	article{
+		border: 1px solid rgba(var(--accent), 25%);
+	}
+
 	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
@@ -53,7 +122,7 @@ import Card from '../components/Card.astro';
 		background-size: 400%;
 		background-position: 0%;
 	}
-	.instructions {
+	.info-container {
 		line-height: 1.6;
 		margin: 1rem 0;
 		border: 1px solid rgba(var(--accent), 25%);
@@ -61,7 +130,7 @@ import Card from '../components/Card.astro';
 		padding: 1rem;
 		border-radius: 0.4rem;
 	}
-	.instructions code {
+	.info-container code {
 		font-size: 0.875em;
 		font-weight: bold;
 		background: rgba(var(--accent), 12%);
@@ -69,7 +138,7 @@ import Card from '../components/Card.astro';
 		border-radius: 4px;
 		padding: 0.3em 0.45em;
 	}
-	.instructions strong {
+	.info-container strong {
 		color: rgb(var(--accent));
 	}
 	.link-card-grid {
