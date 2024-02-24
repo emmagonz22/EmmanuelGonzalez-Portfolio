@@ -1,0 +1,98 @@
+---
+export interface Props {
+	id: string;
+	title: string;
+	subtitle: string;
+	body: string;
+	href?: string; 
+	img_src: string;
+	img_alt: string;
+	date: string;
+
+}
+
+const { id, href="#", title, subtitle, body, img_src, img_alt, date } = Astro.props;
+---
+
+<div class="card" id={id}>
+	<div class="card-image">
+	  <figure class="image is-4by3">
+		<img class="logo" src={img_src} alt={img_alt}>
+	  </figure>
+	</div>
+	<a href={href}></a>
+	<div class="card-content">
+	  <div class="media">
+		<div class="media-content">
+		  <p class="title is-4">{title}</p>
+		  <p class="subtitle is-6">{subtitle}</p>
+		</div>
+	  </div>
+  
+	  <div class="content">
+		<div set:html={body}></div>
+		<br>
+		<div> {date} </div>  <!-- Date -->
+	  </div>
+	</div>
+
+  </div>
+
+
+<style>
+	.link-card {
+		list-style: none;
+		display: flex;
+		padding: 0.25rem;
+		background-color: white;
+		background-image: none;
+		background-size: 400%;
+		border-radius: 0.6rem;
+		background-position: 100%;
+		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+	}
+
+	.link-card > a {
+		width: 100%;
+		text-decoration: none;
+		line-height: 1.4;
+		padding: 1rem 1.3rem;
+		border-radius: 0.35rem;
+		color: #111;
+		background-color: white;
+		opacity: 0.8;
+	}
+
+
+	.logo{
+		object-fit: contain;
+	}
+	h2 {
+		margin: 0;
+		font-size: 1.25rem;
+		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	p {
+		margin-top: 0.5rem;
+		margin-bottom: 0;
+		color: #444;
+	}
+	.link-card:is(:hover, :focus-within) {
+		background-position: 0;
+		background-image: var(--accent-gradient);
+	}
+	.link-card:is(:hover, :focus-within) h2 {
+		color: rgb(var(--accent));
+	}
+
+	.card-image .card-image-size{
+		display: flex !important;
+		justify-content: center;
+		justify-self: center;
+		justify-items: center;
+	}
+	.media-content{
+		overflow: hidden;
+	}
+</style>

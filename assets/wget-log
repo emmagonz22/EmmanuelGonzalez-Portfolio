@@ -1,0 +1,8 @@
+--2024-02-23 00:03:28--  https://media.licdn.com/dms/image/D4E3DAQH3SapwPJvOCQ/image-scale_191_1128/0/1677177940706/pandahat_cybersecurity_cover?e=1709272800
+Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'
+Resolving media.licdn.com (media.licdn.com)... 2605:ba00:1:3::188b:8828, 2605:ba00:1:3::188b:8842, 24.55.94.8, ...
+Connecting to media.licdn.com (media.licdn.com)|2605:ba00:1:3::188b:8828|:443... failed: Connection timed out.
+Connecting to media.licdn.com (media.licdn.com)|2605:ba00:1:3::188b:8842|:443... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2024-02-23 00:05:41 ERROR 403: Forbidden.
+

@@ -11,27 +11,29 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/e-logo.png" />
 		<script src="https://kit.fontawesome.com/21c3e30f83.js" crossorigin="anonymous"></script>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
-		<slot />
+	<body >
+		<slot/>
 	</body>
 </html>
 <style is:global>
 	:root {
 		--accent: 16, 125, 197;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #5dde99 30%, white 60%);
+		--accent-gradient-complete: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent)) 30%, white 60%);
 	}
 	html {
 		font-family: system-ui, sans-serif;
 		background-color: #F6F6F6;
-	}
-	code {
+		max-width: 100%;
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
+
+
 </style>

@@ -1,0 +1,93 @@
+---
+---
+<nav class="mobile-nav is-mobile">
+    <div class="navbrand">
+        <div class="table-content-header">
+            <a class="navbar-title" id="open-table" href="#"><i class="fa  fa-bars" aria-hidden="true"></i> Table of Contents </a>
+        </div>
+    </div>
+  
+  
+    <div class="navbar-menu open">
+      <div class="navbar-start">
+        <a class="navbar-item item" href="#about">About</a>
+        <a class="navbar-item item" href="#education">Education</a>
+        <a class="navbar-item item" href="#skills">Skills</a>
+        <a class="navbar-item item" href="#worke">Work Experience</a>
+        <a class="navbar-item item" href="#workr">Research Experience</a>
+        <a class="navbar-item item" href="#projects">Projects</a>
+        <a class="navbar-item item" href="#achi">Achievements</a>
+      </div>
+    </div>
+</nav>
+  
+<script>
+    const tableContentButton = document.getElementById("open-table") as HTMLElement;
+    const toggleOpen = document.querySelector(".open") as HTMLElement;
+    if(tableContentButton){
+        tableContentButton.addEventListener('click', () => {
+            if(toggleOpen){
+                console.log(toggleOpen.style.display);
+                if( toggleOpen.style.display == "none" || toggleOpen.style.display == ""){
+                    toggleOpen.style.display = "block";
+                }else{
+                    toggleOpen.style.display = "none";
+                }
+                console.log(toggleOpen.style.display);
+            }
+        });
+        
+    }
+  
+
+</script>  
+
+<style>
+
+    .mobile-nav{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbrand{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+        color: rgb(25, 26, 32);
+    }
+
+    .navbar-title{
+        color: rgb(25, 26, 32);
+        width: 200px;
+        text-align: center;
+        background-color: white;
+        font-size: 18px;
+    }
+    .navbar-start{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    @media (min-width: 768px) {
+        .is-mobile{
+            display: none;
+        }
+    }
+
+    .open{
+        display: none;
+    }
+    .table-content-header{
+        display: flex;
+        align-items: center;
+    }
+    .item:hover{
+        background-color: transparent !important;
+    }
+    .item:focus{
+        background-color: transparent !important;
+    }
+</style>

@@ -1,0 +1,163 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import About from '../components/About.astro';
+import Navigation from '../components/Navigation.astro';
+import MobileNavigation from '../components/MobileNavigation.astro';
+---
+
+<Layout title="Emmanuel Gonzalez Morales">
+	<div class="min-header">
+		<!--<button id="theme-switcher" class="toggle-btn secondary"><i class="fa fa-moon-o" aria-hidden="true"></i>	</button> -->
+	
+	</div>
+
+	
+	<div class="container">
+		
+		<main class="content">
+
+			<div class="main-page">
+
+				<!-- About -->
+
+				<h2 class="error-page"> Error 404 can't load page :( </h2>
+				
+		</main>
+</div>
+</Layout>
+
+<script>
+
+
+
+</script>
+
+<style>
+	main {
+		margin: 10px auto auto auto;
+		padding: 1.5rem;
+		max-width: 60ch;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+	}
+
+	.sub-title{
+		margin-top: -8px;
+	}
+
+	.min-header{
+		display: flex;
+		background-color: #1d2a33;
+		height: 40px;
+		justify-content: end;
+		
+	}
+
+	.toggle-btn{
+		display: flex;
+		margin-right: 30px;
+		justify-content: center;
+		width: 30px;
+		height: 30px;
+		margin-top: 5px;
+		align-items: center;
+		border-radius: 80px;
+	}
+
+	article{
+		border: 1px solid rgba(var(--accent), 25%);
+		color:#1d2a33;
+	}
+
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.info-container {
+		line-height: 1.6;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--accent), 25%);
+		background-color: white;
+		padding: 1rem;
+		border-radius: 0.4rem;
+	}
+	.info-container code {
+		font-size: 0.875em;
+		font-weight: bold;
+		background: rgba(var(--accent), 12%);
+		color: rgb(var(--accent));
+		border-radius: 4px;
+		padding: 0.3em 0.45em;
+	}
+	.info-container strong {
+		color: rgb(var(--accent));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem;
+		background-color: #fff;
+		border-bottom: 1px solid #e5e5e5;
+		}
+
+	.navbar-logo {
+		font-size: 1.5rem;
+		font-weight: 700;
+	}
+
+	.navbar-links {
+		display: flex;
+		gap: 1rem;
+		list-style: none;
+	}
+
+	.navbar-links a {
+		text-decoration: none;
+		color: #333;
+		font-weight: 600;
+	}
+
+	.navbar-links a:hover {
+		color: #000;
+	}
+
+	.hamburger-menu {
+		display: none;
+	}
+	.container {
+		display: flex;
+		width: 100%;
+		padding: 0 !important;
+	}
+
+	.content {
+		flex-grow: 1;
+		
+		max-width: 80ch;
+	}
+	.main-page{
+		width: 100%;
+	}
+    .error-page{
+        display: flex;
+        justify-content: center;
+        height: 400px;
+        align-items: center;
+    }
+
+</style>
