@@ -37,20 +37,24 @@ const { title,subtitle,  body, id, footer, href, date="" } = Astro.props;
 		<div set:html={body}></div>
 		<br>
 		<div> {date} </div>  <!-- Date -->
+
+		<div class="ml-3 p-2 overflow-custom" set:html={footer}>
+		</div>
 	  </div>
 	</div>
-	<footer class="card-footer">
+	<!--
+	<div class="ml-3 p-2 overflow-custom" set:html={footer}>
+	</div>
+	 -->
 
-	<footer>
-		<div class="p-1 overflow-custom" set:html={footer}></div></footer>
 		<!-- <a href={href} class="card-footer-item">{href}</a> -->
-	</footer>
+	
   </div>
 
 
 <style>
 	article{
-		border: 1px solid rgba(var(--accent), 25%);
+		border: 1px solid rgba(var(--primary), 25%);
 		color:#1d2a33;
 	}
 	header{
@@ -58,7 +62,7 @@ const { title,subtitle,  body, id, footer, href, date="" } = Astro.props;
 		justify-content: space-between;
 	}
 	.p-1{
-		padding: 10px !important;
+		padding-bottom: 20px !important;
 	}
 	.media-content{
 		overflow: hidden;

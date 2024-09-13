@@ -45,7 +45,7 @@ import CardWithImage from '../components/CardWithImage.astro';
 		
 					<div class="info-container info-container-content" id="uprm"> 
 
-						<div class="info-container-title">University of Puerto Rico Mayaguez Campus <div><strong style="text-align: end;">Exp Grad: May 2025</strong></div></div>
+						<div class="info-container-title"> <strong> University of Puerto Rico Mayaguez Campus </strong> <div><strong style="text-align: end;">Exp Grad: May 2025</strong></div></div>
 						<div class="info-location">Mayaguez, PR </div>
 						<div class="info-gpa"><strong>GPA: 3.48</strong> </div>
 						<br>
@@ -58,9 +58,15 @@ import CardWithImage from '../components/CardWithImage.astro';
 				
 				<div class="card">
 				<div class="info-container" id="techx"> 
-					<div class="info-container-title">Google Tech Exchange <div>Jan 2023 - May 2023</div></div>
+					<div class="info-container-title"> <strong>Google Tech Exchange</strong> <div>Jan 2023 - May 2023</div></div>
 					<div class="info-location">Location: Online </div>
 					<br>
+
+					<div class="card-image">
+						
+						  <img class="logo" src="/assets/tech_exchange_logo.png" alt="Google Tech Exchange">
+						
+					</div>
 
 					Course work: Applied Data Structure, Software Development Studio, Careers in Tech
 				</div>
@@ -290,7 +296,7 @@ import CardWithImage from '../components/CardWithImage.astro';
 					<li>Applied Unit and Integration testing practices that achieved 100% code coverage.</li>
 					<li>Utilized continuous integration and integration testing to enhance project efficiency and software reliability</li>
 				</ul>`} 
-				footer='Github: <a href="https://github.com/emmagonz22/vacaniki" target="_blank">https://github.com/emmagonz22/vacaniki</a>'/>
+				footer='<a href="https://github.com/emmagonz22/vacaniki" target="_blank">https://github.com/emmagonz22/vacaniki</a>'/>
 
 		
 				<CardFooter id='poller' 
@@ -301,34 +307,58 @@ import CardWithImage from '../components/CardWithImage.astro';
 					<li>Users can add, remove, and edit participants in the poll to randomly select a participant.</li>
 					<li>Designed command line tool to use the application in the terminal.</li>
 				</ul>`} 
-				footer='Github: <a href="https://github.com/emmagonz22/RandomPoller" target="_blank">https://github.com/emmagonz22/RandomPoller</a>'/>
+				footer='<a href="https://github.com/emmagonz22/RandomPoller" target="_blank">https://github.com/emmagonz22/RandomPoller</a>'/>
 			
+				
 
-				<CardFooter id='plv-website' 
+
+				<CardWithImage
+				id='plv-website' 
+				img_src="/assets/plv_logo.jpeg"
+				img_alt="plv"
 				title='Proyecto Luz Verde Website' 
+				subtitle=''
+				date=''
 				body=
 				{`<ul>
 					<li>Created the website for Proyecto Luz Verde using Wordpress</li>
-				</ul>`} 
-				footer='Github: <a href="https://www.uprm.edu/proyectoluzverde/" target="_blank">https://www.uprm.edu/proyectoluzverde</a>'
+				</ul>
+			
+				<a style="margin-left: 25px;" href="https://www.uprm.edu/proyectoluzverde/" target="_blank">
+					https://www.uprm.edu/proyectoluzverde
+				</a>
+				`} 
 				/>
-				
+
+
 				<CardFooter id='huffman' 
 				title='Huffman Encoding' 
 				body=
 				{`<ul>
 					<li>Coded a Huffman Encoding compression algorithm using Java on which compressed files space were reduced up to 70%.</li>
 				</ul>`} 
-				footer='Github: <a href="https://github.com/emmagonz22/HuffmanCodingP2" target="_blank">https://github.com/emmagonz22/HuffmanCodingP2</a>'
+				footer='<a href="https://github.com/emmagonz22/HuffmanCodingP2" target="_blank">https://github.com/emmagonz22/HuffmanCodingP2</a>'
 				/>
-			
+		
+				
+				<CardFooter id='NES2' 
+				title='Assembly NES 6502 TatakaiNES' 
+				body=
+				{`<ul>
+					<li>Coded a fighting game using the Assembly 6502 instruction.</li>
+					<li>Use of the PPU to render 2 players, that with animations. </li>
+					<li>Designed sprite using the NEXXT tool using differente color palettes.</li>
+				</ul>`} 
+				footer='<a href="https://github.com/emmagonz22/TatakaiNES" target="_blank">https://github.com/emmagonz22/TatakaiNES</a>'
+				/>
+
 				<CardFooter id='NES1' 
 				title='Assembly NES 6502 "My name"' 
 				body=
 				{`<ul>
 					<li>Displayed my name in the Assembly 6502 instructions in an NES game.</li>
 				</ul>`} 
-				footer='Github: <a href="https://github.com/emmagonz22/NESMYNAME" target="_blank">https://github.com/emmagonz22/NESMYNAME</a>'
+				footer='<a href="https://github.com/emmagonz22/NESMYNAME" target="_blank">https://github.com/emmagonz22/NESMYNAME</a>'
 				/>
 				
 				<CardFooter id='dinner' 
@@ -338,7 +368,7 @@ import CardWithImage from '../components/CardWithImage.astro';
 					<li>Recreated a mobile game called "Diner Dash" using C++ by creating our own features of serving the burgers using stack and recursion, adding sprites and audio. </li>
 					<li>Use of Objected Oriented Programming using the Openframework library.</li>
 				</ul>`} 
-				footer='Github: <a href="https://github.com/emmagonz22/DinerDashGameP3" target="_blank">https://github.com/emmagonz22/DinerDashGameP3</a>'
+				footer='<a href="https://github.com/emmagonz22/DinerDashGameP3" target="_blank">https://github.com/emmagonz22/DinerDashGameP3</a>'
 				/>
 
 				<CardFooter id='pacman' 
@@ -348,7 +378,7 @@ import CardWithImage from '../components/CardWithImage.astro';
 					<li>Recreated a mobile game called "Pacman" using C++ by creating the main mechanics of the games</li>
 					<li>Use of Objected Oriented Programming using the Openframework library.</li>
 				</ul>`} 
-				footer='Github: <a href="https://github.com/emmagonz22/PacmanP2" target="_blank">https://github.com/emmagonz22/PacmanP2</a>'
+				footer='<a href="https://github.com/emmagonz22/PacmanP2" target="_blank">https://github.com/emmagonz22/PacmanP2</a>'
 				/>
 		
 
@@ -356,28 +386,65 @@ import CardWithImage from '../components/CardWithImage.astro';
 
 			<h3 class="sub-title" id="achi"><span class="text-gradient">Achievements</span></h3>
 		
-			<Card 
-			title='BAE Systems Think Tank' 
-			body={`
-		
-			4st place in the BAESystem Thinkthank competition with white paper in "Guidance, Navigation and Controls Subsystems for Autonomous Systems", Mayaguez, Puerto Rico
-			
-			`}
-			id='bae-think-2'
-			date='Nov 2023 - Dec 2023'
-			/>
 
-			<Card 
-			title='BAE Systems Think Tank' 
-			body={`
-		
-			4st place in the BAESystem Thinkthank competition with white paper in "Laser System for Defense Applications", Mayaguez, Puerto Rico
-			
-			`}
-			id='bae-think-1'
-			date='Aug 2022 - Nov 2022'
-			/>
 
+			<CardWithImage
+			
+		
+				title='BAE Systems Think Tank' 
+				subtitle='4th place'
+				id='bae-think-2'
+				date='Nov 2023 - Dec 2023'
+				href=''
+				img_src="/assets/bae_systems_thinktankthird.png"
+				img_alt="Bae System Thinktank 3rd edition"
+				body={`
+			
+					BAESystem Thinkthank competition with white paper in "Guidance, Navigation and Controls Subsystems for Autonomous Systems", Mayaguez, Puerto Rico
+					<br>
+					<br>
+					<strong> Summary: </strong>
+					<p style="text-indent: 50px;">
+						Guidance Navigation and Controls Subsystems for Autonomous systems (GNC) subsystems have a common problem and that is the presence of disturbance
+						(noise), this noise can cause many error within the sensor that can affect the terminal states of vehicles. This whitepaper focus on real-time
+						machine-learning PID controller as a subsystem proposed in the control function of GNC systems to correct for that noise.
+					</p>
+				`}
+
+				/>
+
+
+
+				<CardWithImage
+			
+		
+				title='BAE Systems Think Tank' 
+				subtitle='4th place'
+				id='bae-think-1'
+				date='Aug 2022 - Nov 2022'
+				href=''
+				img_src="/assets/bae_systems_thinktanksecond.png"
+				img_alt="Bae System Thinktank 2nd edition"
+				body={`
+			
+					BAESystem Thinkthank competition with white paper in "Laser System for Defense Applications", Mayaguez, Puerto Rico
+					<br>
+					<br>
+					<strong> Summary: </strong>
+					
+					<p style="text-indent: 50px;">
+						Laser systems require a heavy input of power and occupy significant space in the limited area they operate in
+					   	this white paper presents a comprenhensive comparison of using multiple laser system versus having a single 
+						system with multiple functionalities. 
+					</p>
+				`}
+
+				/>
+
+
+				
+			
+			
 			<Card 
 			title='Evolving Space Hackathon'
 			body={`
@@ -388,6 +455,28 @@ import CardWithImage from '../components/CardWithImage.astro';
 			/>
 
 	
+			<CardWithImage
+			
+		
+			
+				title='PRLSAMP Scholarship' 
+				subtitle=''
+				id='prlsamp'
+				date='Aug 2022'
+				href=''
+				img_src="/assets/prlsamp.png"
+				img_alt="PRLSAMP program"
+				body={`
+			
+					
+					Scholarship given to student of minority group who participated 
+					in the of PRLSAMP (Puerto Rico Louis Stokes Alliance for Minority Participation).
+		
+				`}
+
+				/>
+
+
 
 			</div>
 
@@ -498,12 +587,12 @@ import CardWithImage from '../components/CardWithImage.astro';
 	}
 
 	article{
-		border: 1px solid rgba(var(--accent), 25%);
+		border: 1px solid rgba(var(--primary), 25%);
 		color:#1d2a33;
 	}
 
 	.text-gradient {
-		background-image: var(--accent-gradient);
+		background-image: var(--primary-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
@@ -512,7 +601,7 @@ import CardWithImage from '../components/CardWithImage.astro';
 	.info-container {
 		line-height: 1.6;
 		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
+		border: 1px solid rgba(var(--primary), 25%);
 		background-color: white;
 		padding: 1rem;
 		border-radius: 0.4rem;
@@ -520,8 +609,8 @@ import CardWithImage from '../components/CardWithImage.astro';
 	.info-container code {
 		font-size: 0.875em;
 		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
+		background: rgba(var(--primary), 12%);
+		color: rgb(var(--primary));
 		border-radius: 4px;
 		padding: 0.3em 0.45em;
 	}
@@ -531,7 +620,7 @@ import CardWithImage from '../components/CardWithImage.astro';
 		text-align: start;
 	}
 	.info-container strong {
-		color: rgb(var(--accent));
+		color: rgb(var(--primary));
 	}
 	.info-location {
 		display: flex;
@@ -591,7 +680,7 @@ import CardWithImage from '../components/CardWithImage.astro';
 	@media (min-width: 768px){
 		.content {
 			flex-grow: 1;
-			max-width: 80ch !important;
+			max-width: 90ch !important;
 		}
 
 		.to-top-btn{
@@ -625,8 +714,18 @@ import CardWithImage from '../components/CardWithImage.astro';
 			display: none !important; 
 			justify-content: center !important; 
 			align-items: center; 
-			background-color: rgba(var(--accent)) !important;
+			background-color: rgba(var(--primary)) !important;
 		}
 
+	.logo{
+		object-fit: contain;
+	}
+
+	.card-image .card-image-size{
+		display: flex !important;
+		justify-content: center;
+		justify-self: center;
+		justify-items: center;
+	}
 
 </style>

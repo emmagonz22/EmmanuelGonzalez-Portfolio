@@ -12,7 +12,7 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" type="image/svg+xml" href="/e-logo.png" />
+		<link rel="icon" type="image/svg+xml" href="/assets/logo.png" />
 		<script src="https://kit.fontawesome.com/21c3e30f83.js" crossorigin="anonymous"></script>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
@@ -23,9 +23,19 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--accent: 16, 125, 197;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #5dde99 30%, white 60%);
-		--accent-gradient-complete: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent)) 30%, white 60%);
+		--primary: 16, 125, 197;
+		--secondary: #8579f2;
+		--accent: #5a48fc;
+		--primary-gradient: linear-gradient(45deg, rgb(var(--primary)), var(--accent) 30%, white 60%);
+		/*--primary-gradient: linear-gradient(45deg, rgb(var(--primary)), #5dde99 30%, white 60%);*/
+		--primary-gradient-complete: linear-gradient(45deg, rgb(var(--primary)), rgb(var(--primary)) 30%, white 60%);
+		--cardBackground:	#ebebfa;
+		--linearPrimarySecondary: linear-gradient(#107dc6, #8579f2);
+		--linearPrimaryAccent: linear-gradient(#107dc6, #5a48fc);
+		--linearSecondaryAccent: linear-gradient(#8579f2, #5a48fc);
+		--radialPrimarySecondary: radial-gradient(#107dc6, #8579f2);
+		--radialPrimaryAccent: radial-gradient(#107dc6, #5a48fc);
+		--radialSecondaryAccent: radial-gradient(#8579f2, #5a48fc);
 	}
 	html {
 		font-family: system-ui, sans-serif;
