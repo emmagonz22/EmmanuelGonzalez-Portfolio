@@ -9,7 +9,7 @@
 <div >
     <div class="card-image-size">
 
-        <img src="/assets/me.jpg" class="profile-img" alt="Emmanuel Gonzalez">
+        <img src="/assets/emmanuel_profile_pic.jpg" class="profile-img" alt="Emmanuel Gonzalez">
     
     </div>
     <div class="card-content">
@@ -21,9 +21,15 @@
             </div>
     </div>
     <div class="content description">
-        I'm a Software Engineering student experienced in Full-stack Development using TypeScript, Python and Java.
-        I'm challenging myself in software engineering in different fields such as Cyber Security
-        with the PandaHAT Competetion team and in Machine learning with the PandaHat Adversarial.
+        
+        I'm a Software Engineering student at the University of Puerto Rico Mayagüez (UPRM)
+        with experience in Full-stack Development using TypeScript, Angular, Python, Flask,
+        and Java with Spring Boot. I've worked on web applications and researched adversarial
+        machine learning attacks, gaining skills in both development and cybersecurity.
+        I'm proficient in Python, C, C++, JavaScript, and technologies like Docker, Google Cloud,
+        and PostgreSQL. At Microsoft, L3Harris, and the Puerto Rico Seismic Network, I gained expertise
+        in kernel-level programming and web development.
+
         <br>
         <br>
         <h2>Socials:</h2>
@@ -63,28 +69,26 @@
         justify-content: center;
         justify-items: center;
         justify-self: center;
-        height: 325px;
+        height: 210px;
         margin-top: 25px;
 
     }
     .profile-img{
 		
         border-radius: 50% !important; 
-		width: 325px !important;
-        height: 325px !important;
+		width: 200px !important;
+        height: 200px !important;
         object-fit: cover;
 
 	}
     .profile-image-content{
         display: flex;
         width: 100%;
-        
     }
 	.image{
 		display: flex !important;
 		justify-content: center !important;
         width: 100%;
-        
 	}
     .description{
         color: #1d2a33;
@@ -92,10 +96,10 @@
         text-align: justify;
         text-justify: inter-word;
         margin-top: 10px;
+        
     }
     .text-gradient {
 		background-image: var(--primary-gradient);
-       
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
@@ -117,8 +121,22 @@
         font-size: 40px;     
     }
     .email{
+
+        @media (max-width: 550px) {
+            font-size: 16px !important;
+        }
+
         font-size: 20px !important;
         text-align: center;
+
+   
+
+    }
+    .email-area{
+        @media (max-width: 550px) {
+            height: 65px ;
+        }
+        height: 45px;
     }
     .sec-email{
         text-align: center;

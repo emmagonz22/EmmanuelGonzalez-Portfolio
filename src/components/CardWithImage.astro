@@ -29,7 +29,7 @@ const { id, href="#", title, subtitle, body, img_src, img_alt, date } = Astro.pr
 		</div>
 	  </div>
   
-	  <div class="content">
+	  <div class="content overflow-custom">
 		<div set:html={body}></div>
 		<br>
 		<div> {date} </div>  <!-- Date -->
@@ -102,8 +102,26 @@ const { id, href="#", title, subtitle, body, img_src, img_alt, date } = Astro.pr
 		justify-items: center;
 	
 	}
+
+	.card-image{
+		display: flex !important;
+		justify-content: center;
+		justify-self: center;
+		justify-items: center;
+	
+	}
+
+	.image{
+		width: 90%;
+	
+	}
 	.media-content{
 		overflow: hidden;
 	}
 	
+	@media (max-width: 768px){
+		.overflow-custom{
+			overflow: hidden;
+		}
+	}
 </style>

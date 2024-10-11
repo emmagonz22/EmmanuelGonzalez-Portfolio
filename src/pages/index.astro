@@ -4,10 +4,15 @@ import About from '../components/About.astro';
 import Navigation from '../components/Navigation.astro';
 import MobileNavigation from '../components/MobileNavigation.astro';
 import Card from '../components/Card.astro';
+import ProgrammingSkills from '../components/ProgrammingSkills.astro';
 import CardFooter from '../components/CardFooter.astro';
-import 'bulma/bulma.sass';
+import 'bulma/css/bulma.css';
 import CardWithImage from '../components/CardWithImage.astro';
-
+import Footer from '../components/Footer.astro';
+import WorkExperience from '../components/WorkExperience.astro';
+import ResearchExperience from '../components/ResearchExperience.astro';
+import Projects from '../components/Projects.astro';
+import Achievements from '../components/Achievements.astro'
 ---
 
 <Layout title="Emmanuel Gonzalez Morales">
@@ -17,487 +22,164 @@ import CardWithImage from '../components/CardWithImage.astro';
 	<div class="container">
 	
 		<Navigation />
-		<main class="content">
-			
-			<div class="header-container">
-				<!--
-				<div class="min-header">
-					<button id="theme-switcher" class="toggle-btn secondary"><i class="fa fa-moon-o" aria-hidden="true"></i>	</button> 
+			<div>
+			<main class="content">
 				
+				<div class="header-container">
+					<!--
+					<div class="min-header">
+						<button id="theme-switcher" class="toggle-btn secondary"><i class="fa fa-moon-o" aria-hidden="true"></i>	</button> 
+					
+					</div>
+				-->
+					<MobileNavigation/>
 				</div>
-			-->
-				<MobileNavigation/>
-			</div>
 
-			<div class="main-page">
+				<div class="main-page">
 
-				<!-- About -->
+					<!-- About -->
 
-				
-				<About/>
+					
+					<About/>
 
 
-				<!-- Education -->
+					<!-- Education -->
 
-				<h3 class="sub-title" id="education"><span class="text-gradient">Education</span></h3>
+					<h3 class="sub-title" id="education"><span class="text-gradient">Education</span></h3>
 
-				<div class="card">
-		
-					<div class="info-container info-container-content" id="uprm"> 
+					<div class="card">
+			
+						<div class="info-container info-container-content" id="uprm"> 
 
-						<div class="info-container-title"> <strong> University of Puerto Rico Mayaguez Campus </strong> <div><strong style="text-align: end;">Exp Grad: May 2025</strong></div></div>
-						<div class="info-location">Mayaguez, PR </div>
-						<div class="info-gpa"><strong>GPA: 3.48</strong> </div>
+							<div class="info-container-title"> <strong> University of Puerto Rico Mayaguez Campus </strong> <div><strong style="text-align: end;">Exp Grad: May 2025</strong></div></div>
+							<div class="info-location">Mayaguez, PR </div>
+							<div class="info-gpa"><strong>GPA: 3.50</strong> </div>
+							<br>
+
+							Course work: Database, OS, Computer Networks, Data Structure & Algorithms, Software Design/Testing/Requirements, Algorithm Design, Computer Architecture
+							
+						</div>
+
+					</div>
+					
+					<div class="card">
+					<div class="info-container" id="techx"> 
+						<div class="info-container-title"> <strong>Google Tech Exchange</strong> <div>Jan 2023 - May 2023</div></div>
+						<div class="info-location">Location: Online </div>
 						<br>
 
-						Course work: Data Structure & Algorithms, Software Design/Testing/Requirements, Algorithm Design, Computer Architecture
-						
+						<div class="card-image">
+							
+							<img class="logo" src="/assets/tech_exchange_logo.png" alt="Google Tech Exchange">
+							
+						</div>
+
+						Course work: Applied Data Structure, Software Development Studio, Careers in Tech
 					</div>
-
-				</div>
-				
-				<div class="card">
-				<div class="info-container" id="techx"> 
-					<div class="info-container-title"> <strong>Google Tech Exchange</strong> <div>Jan 2023 - May 2023</div></div>
-					<div class="info-location">Location: Online </div>
-					<br>
-
-					<div class="card-image">
-						
-						  <img class="logo" src="/assets/tech_exchange_logo.png" alt="Google Tech Exchange">
-						
 					</div>
+					<!-- Skills -->
 
-					Course work: Applied Data Structure, Software Development Studio, Careers in Tech
-				</div>
-				</div>
-				<!-- Skills -->
+					<!-- Empty Card without Footer 
+						<Card title='' 
+						body=''
+						id=''/>
+					-->
 
-				<!-- Empty Card without Footer 
-					<Card title='' 
-					body=''
-					id=''/>
-				-->
-
-				<h3 class="sub-title" id="skills"><span class="text-gradient">Skills</span></h3>
-				
-				<Card title='Programming Languages:' 
-				body={`<ul>
-					<li style="margin-left: 20px;">Python</li>
-					<li style="margin-left: 20px;">TypeScript/JavaScript</li>
-					<li style="margin-left: 20px;">Java</li>
-					<li style="margin-left: 20px;">C++</li>
-				</ul>`}
-				id='pl'/>
-				
-				<Card title='Frameworks:' 
-				body={`<ul>
-					<li style="margin-left: 20px;">Angular</li>
-					<li style="margin-left: 20px;">Spring Boot</li>
-					<li style="margin-left: 20px;">Flask</li>
-				</ul>
-				 `}
-				id='frameworks'/>
-
-				<Card title='Technologies:' 
-				body= {`<ul>
-					<li style="margin-left: 20px;">HTML5/CSS3</li>
-					<li style="margin-left: 20px;">Git</li>
-					<li style="margin-left: 20px;">PostgreSQL</li>
-					<li style="margin-left: 20px;">Terminal/Bash</li>
-					<li style="margin-left: 20px;">Linux</li>
-					<li style="margin-left: 20px;">Google Cloud Storage(GCS)</li>
-					<li style="margin-left: 20px;">CRUD</li>
-					<li style="margin-left: 20px;">SCRUM</li>
-					<li style="margin-left: 20px;">LaTex</li>
-					<li style="margin-left: 20px;">Docker</li>
-				</ul>`}
-				id='tech'/>
-
-				<Card title='Languages:' 
-				body={`<ul>
-					<li style="margin-left: 20px;">English</li>
-					<li style="margin-left: 20px;">Spanish</li>
-				</ul>
-				 `}
-				id='lan'/>
-				
+					<h3 class="sub-title" id="skills"><span class="text-gradient">Skills</span></h3>
+					
+					<ProgrammingSkills></ProgrammingSkills>
 
 
-				<!-- Work Experiences -->
-
-				<h3 class="sub-title" id="worke"><span class="text-gradient">Work Experience</span></h3>
-				
-
-				<!-- Empty CardFooter
-				<CardFooter id='' 
-				title='' 
-				body=
-				{``} 
-				footer=''
-				/>
-				 -->
-			
-				 
-				 <!--
-					<CardFooter id='l3' 
-					title='L3Harris' 
-					date='May 2023 - July 2023'
+					<Card title='Frameworks:' 
 					body={`<ul>
-						<li>Coded a Full-stack web application using the Angular and SpringBoot frameworks.</li>
-						<li>Calculated satellite's ephemeris(position) using TLE data for a 7-day period.</li>
-						<li>Displayed the propagated orbits in a Cesium 3D globe.</li>
-						<li>Used Jira to create and manage the sprint's backlog and BitBucket to collaborate with others Software Engineers.</li></ul>`}
-					footer=''
-				/>
-				-->
+						<li style="margin-left: 20px;">Angular</li>
+						<li style="margin-left: 20px;">Astro</li>
+						<li style="margin-left: 20px;">Spring Boot</li>
+						<li style="margin-left: 20px;">Flask</li>
+					</ul>
+					`}
+					id='frameworks'/>
 
-				<CardWithImage 
-				id='ms' 
-				title='Microsoft' 
-				subtitle="Incoming Software Engineering intern"
-				href=""
-				img_src="/assets/ms_logo.png"
-				img_alt="Microsoft logo"
-				date='May 2024 - Aug 2024'
-				body={``}
-				/>
+					<Card title='Technologies:' 
+					body= {`<ul>
+						<li style="margin-left: 20px;">HTML5/CSS3</li>
+						<li style="margin-left: 20px;">Git</li>
+						<li style="margin-left: 20px;">PostgreSQL</li>
+						<li style="margin-left: 20px;">Terminal/Bash</li>
+						<li style="margin-left: 20px;">Linux</li>
+						<li style="margin-left: 20px;">Google Cloud Storage(GCS)</li>
+						<li style="margin-left: 20px;">CRUD</li>
+						<li style="margin-left: 20px;">SCRUM</li>
+						<li style="margin-left: 20px;">LaTex</li>
+						<li style="margin-left: 20px;">Docker</li>
+					</ul>`}
+					id='tech'/>
 
-
-				<CardWithImage 
-				id='l3' 
-				title='L3Harris' 
-				subtitle="Software Engineering intern"
-				href=""
-				img_src="/assets/l3_banner.jpeg"
-				img_alt="L3Harris logo"
-				date='May 2023 - July 2023'
-				body={`<ul>
-					<li>Coded a Full-stack web application using the Angular and SpringBoot frameworks.</li>
-					<li>Calculated satellite's ephemeris(position) using TLE data for a 7-day period.</li>
-					<li>Displayed the propagated orbits in a Cesium 3D globe.</li>
-					<li>Used Jira to create and manage the sprint's backlog and BitBucket to collaborate with others Software Engineers.</li></ul>`}
-				/>
-
-
-				<CardWithImage 
-				id='prsn' 
-				img_src="/assets/prsn_logo.jpeg"
-				img_alt="PRSN logo"
-				title='Puerto Rico Seismic Network' 
-				date='Mar 2022 - Dec 2022'
-				subtitle="Web developer"
-				href=""
-				body={
-				`<ul>
-					<li>Maintained the Seismic Networks website, Linux servers and internal tools using PHP and JavaScript.</li>
-					<li>Utilized strong networking skills to troubleshoot and resolve static IP issues efficiently</li>
-				</ul>`} 
-				/>
-			
-				
-				
-		
-
-				<!-- Research Experiences -->
-			
-				<h3 class="sub-title" id="workr"><span class="text-gradient">Research Experience</span></h3>
-				
-	
-				<CardWithImage 
-				id='panda_adversarial' 
-				title='PandaHat Adversarial' 
-				subtitle='Researcher Assistant'
-				date='Jan 2024 - Current'
-				img_src="/assets/pandahat_cybersecurity_cover.jpeg"
-				img_alt="PandaHat Adversarial"
-
-
-				body={`<ul>
-					<li>Used of Python, TensorFlow/Keras and Matplotlib to create different machine models.</li>
-					<li>Exploit different models by doing black-box adversarial attacks like the one-pixel attack.</li>
-					<li>Literary review of research papers related to adversarial attacks to machine learning models.</li>
-				</ul>`}
-				/>
-
-				<CardWithImage 
-				id='panda' 
-				img_src="/assets/pandahat_cybersecurity_cover.jpeg"
-				img_alt="PandaHat Competition"
-				title='PandaHat Competition Research' 
-				subtitle='PandaHat CTF member'
-				date='Aug 2023 - Current'
-				body={`<ul>
-					<li>Learned Linux bash commands to apply cybersecurity skills.</li>
-					<li>Use in practice cybersecurity skills to solve Capture the flag (CTF) (Malware Analysis, Web Exploitation).</li>
-					<li>Participate in Capture the flag (CTF) competion such as MapleCTF, HuntressCTF.</li>
-				</ul>`}
-				/>
-
-
-				<CardWithImage
-				id='rumbus' 
-				img_src="/assets/rumbus.png"
-				img_alt="RUMBus"
-				title='RUMBus' 
-				subtitle='Front-end development'
-				date='May 2022 - Current'
-				body={`<ul>
-					<li>Developed the administrative application dashboard using Typescript and the Angular Framework.</li>
-					<li>Used AWS S3 and AWS Route 53 to host and register the domain, secured with AWS Certificate Manager.</li>
-					<li>Designed a monitor view to display vehicle positions on a monitor.</li>
-				</ul>`}
-				/>
-
-				
-
-				<Card id='pvbot' 
-				title='PVBot Research'
-				subtitle='Researcher Assistant'
-				date='Feb 2022 - May 2022'
-				body=
-				{`<ul>
-					<li>Created a robot that can scan solar panel using Python and a Raspberry.</li>
-					<li>Designed the flowcharts for the functionality of the robot's movement.</li>
-					<li>Developed the robot's motion algorithm, incorporating data from multiple sensors to enhance control and navigation.</li>
-				</ul>`} 
-				
-				/>
-			
-				<CardWithImage
-				id='gamedev1' 
-				title='UPRM CHRES Remote Summer Reseach' 
-				subtitle= 'Game developer'
-				date='May 2021 - Jul 2022'
-				href=''
-				img_src="/assets/CHRES_logo.png"
-				img_alt="CHRES logo"
-				body=
-				{`<ul>
-					<li>Created a game with topic of renewable energy using C# and Unity game engine</li>
-				</ul>`} 
-
-				/>
-
-				
-
-				<!-- Projects (TODO: Move to his own Component ti simplify the codebase )-->
-
-				<h3 class="sub-title" id="projects"><span class="text-gradient">Projects</span></h3>
-				
-
-
-				<CardFooter id='GTEPA1' 
-				title='Vacaniki Google Tech Exchange SDS Group Project' 
-				body=
-				{`<ul>
-					<li>Developed a Full-stack web app with Python, Flask, HTML5/CSS3 for users to view and create their wikipages.</li>
-					<li>Used Google Cloud Storage Buckets to store the content of the website.</li>
-					<li>Applied Unit and Integration testing practices that achieved 100% code coverage.</li>
-					<li>Utilized continuous integration and integration testing to enhance project efficiency and software reliability</li>
-				</ul>`} 
-				footer='<a href="https://github.com/emmagonz22/vacaniki" target="_blank">https://github.com/emmagonz22/vacaniki</a>'/>
-
-		
-				<CardFooter id='poller' 
-				title='Random Poller' 
-				body=
-				{`<ul>
-					<li>Coded a web application using HTML5/CSS3, Python with Flask, JavaScript and CSV spreadsheet to store the data.</li>
-					<li>Users can add, remove, and edit participants in the poll to randomly select a participant.</li>
-					<li>Designed command line tool to use the application in the terminal.</li>
-				</ul>`} 
-				footer='<a href="https://github.com/emmagonz22/RandomPoller" target="_blank">https://github.com/emmagonz22/RandomPoller</a>'/>
-			
-				
-
-
-				<CardWithImage
-				id='plv-website' 
-				img_src="/assets/plv_logo.jpeg"
-				img_alt="plv"
-				title='Proyecto Luz Verde Website' 
-				subtitle=''
-				date=''
-				body=
-				{`<ul>
-					<li>Created the website for Proyecto Luz Verde using Wordpress</li>
-				</ul>
-			
-				<a style="margin-left: 25px;" href="https://www.uprm.edu/proyectoluzverde/" target="_blank">
-					https://www.uprm.edu/proyectoluzverde
-				</a>
-				`} 
-				/>
-
-
-				<CardFooter id='huffman' 
-				title='Huffman Encoding' 
-				body=
-				{`<ul>
-					<li>Coded a Huffman Encoding compression algorithm using Java on which compressed files space were reduced up to 70%.</li>
-				</ul>`} 
-				footer='<a href="https://github.com/emmagonz22/HuffmanCodingP2" target="_blank">https://github.com/emmagonz22/HuffmanCodingP2</a>'
-				/>
-		
-				
-				<CardFooter id='NES2' 
-				title='Assembly NES 6502 TatakaiNES' 
-				body=
-				{`<ul>
-					<li>Coded a fighting game using the Assembly 6502 instruction.</li>
-					<li>Use of the PPU to render 2 players, that with animations. </li>
-					<li>Designed sprite using the NEXXT tool using differente color palettes.</li>
-				</ul>`} 
-				footer='<a href="https://github.com/emmagonz22/TatakaiNES" target="_blank">https://github.com/emmagonz22/TatakaiNES</a>'
-				/>
-
-				<CardFooter id='NES1' 
-				title='Assembly NES 6502 "My name"' 
-				body=
-				{`<ul>
-					<li>Displayed my name in the Assembly 6502 instructions in an NES game.</li>
-				</ul>`} 
-				footer='<a href="https://github.com/emmagonz22/NESMYNAME" target="_blank">https://github.com/emmagonz22/NESMYNAME</a>'
-				/>
-				
-				<CardFooter id='dinner' 
-				title='Dinner Dash' 
-				body=
-				{`<ul>
-					<li>Recreated a mobile game called "Diner Dash" using C++ by creating our own features of serving the burgers using stack and recursion, adding sprites and audio. </li>
-					<li>Use of Objected Oriented Programming using the Openframework library.</li>
-				</ul>`} 
-				footer='<a href="https://github.com/emmagonz22/DinerDashGameP3" target="_blank">https://github.com/emmagonz22/DinerDashGameP3</a>'
-				/>
-
-				<CardFooter id='pacman' 
-				title='Pacman' 
-				body=
-				{`<ul>
-					<li>Recreated a mobile game called "Pacman" using C++ by creating the main mechanics of the games</li>
-					<li>Use of Objected Oriented Programming using the Openframework library.</li>
-				</ul>`} 
-				footer='<a href="https://github.com/emmagonz22/PacmanP2" target="_blank">https://github.com/emmagonz22/PacmanP2</a>'
-				/>
-		
-
-			<!-- Achievements -->
-
-			<h3 class="sub-title" id="achi"><span class="text-gradient">Achievements</span></h3>
-		
-
-
-			<CardWithImage
-			
-		
-				title='BAE Systems Think Tank' 
-				subtitle='4th place'
-				id='bae-think-2'
-				date='Nov 2023 - Dec 2023'
-				href=''
-				img_src="/assets/bae_systems_thinktankthird.png"
-				img_alt="Bae System Thinktank 3rd edition"
-				body={`
-			
-					BAESystem Thinkthank competition with white paper in "Guidance, Navigation and Controls Subsystems for Autonomous Systems", Mayaguez, Puerto Rico
-					<br>
-					<br>
-					<strong> Summary: </strong>
-					<p style="text-indent: 50px;">
-						Guidance Navigation and Controls Subsystems for Autonomous systems (GNC) subsystems have a common problem and that is the presence of disturbance
-						(noise), this noise can cause many error within the sensor that can affect the terminal states of vehicles. This whitepaper focus on real-time
-						machine-learning PID controller as a subsystem proposed in the control function of GNC systems to correct for that noise.
-					</p>
-				`}
-
-				/>
-
-
-
-				<CardWithImage
-			
-		
-				title='BAE Systems Think Tank' 
-				subtitle='4th place'
-				id='bae-think-1'
-				date='Aug 2022 - Nov 2022'
-				href=''
-				img_src="/assets/bae_systems_thinktanksecond.png"
-				img_alt="Bae System Thinktank 2nd edition"
-				body={`
-			
-					BAESystem Thinkthank competition with white paper in "Laser System for Defense Applications", Mayaguez, Puerto Rico
-					<br>
-					<br>
-					<strong> Summary: </strong>
+					<Card title='Languages:' 
+					body={`<ul>
+						<li style="margin-left: 20px;">English</li>
+						<li style="margin-left: 20px;">Spanish</li>
+					</ul>
+					`}
+					id='lan'/>
 					
-					<p style="text-indent: 50px;">
-						Laser systems require a heavy input of power and occupy significant space in the limited area they operate in
-					   	this white paper presents a comprenhensive comparison of using multiple laser system versus having a single 
-						system with multiple functionalities. 
-					</p>
-				`}
-
-				/>
 
 
-				
-			
-			
-			<Card 
-			title='Evolving Space Hackathon'
-			body={`
-				1st place in the ”Student Category” Hackathon of Blockchain in Bayamon, Puerto Rico 
-			`}
-			id='blockchain1'
-			date='Aug 2022'
-			/>
+					<!-- Work Experiences -->
 
-	
-			<CardWithImage
-			
-		
-			
-				title='PRLSAMP Scholarship' 
-				subtitle=''
-				id='prlsamp'
-				date='Aug 2022'
-				href=''
-				img_src="/assets/prlsamp.png"
-				img_alt="PRLSAMP program"
-				body={`
-			
+					<h3 class="sub-title" id="worke"><span class="text-gradient">Work Experience</span></h3>
 					
-					Scholarship given to student of minority group who participated 
-					in the of PRLSAMP (Puerto Rico Louis Stokes Alliance for Minority Participation).
-		
-				`}
+					<WorkExperience/>
 
-				/>
+					<!-- Research Experiences -->
+				
+					<h3 class="sub-title" id="workr"><span class="text-gradient">Research Experience</span></h3>
+					
+					<ResearchExperience/>
+
+					
+
+					<!-- Projects (TODO: Move to his own Component ti simplify the codebase )-->
+
+					<h3 class="sub-title" id="projects"><span class="text-gradient">Projects</span></h3>
+					
+					<Projects/>
+						
+			
+
+				<!-- Achievements -->
+
+				<h3 class="sub-title" id="achi"><span class="text-gradient">Achievements</span></h3>
+			
+				<Achievements/>
 
 
 
-			</div>
 
-	
-		</main>
+				</div>
+
+			
+			</main>
+			<Footer></Footer>
+		</div>
 </div>
 </Layout>
+<!--
 <button id="scrollToTopButton" class="button is-primary is-rounded to-top-btn" aria-label="Scroll to top">
 	<span class="icon">
-	  <i class="fas fa-chevron-up"></i> <!-- Font Awesome icon -->
+	  <i class="fas fa-chevron-up"></i> 
 	</span>
 </button>
+-->
 <script>
 	const themeSwitcher = document.getElementById('theme-switcher');
 	const body = document.body;
 	body.setAttribute('data-theme', 'light');
 	themeSwitcher?.addEventListener('click', () => {
 		if (body.getAttribute('data-theme') === 'light') {
-		body.setAttribute('data-theme', 'dark');
+			body.setAttribute('data-theme', 'dark');
 		} else {
-		body.setAttribute('data-theme', 'light');
+			body.setAttribute('data-theme', 'light');
 		}
 	});
 
@@ -543,7 +225,7 @@ import CardWithImage from '../components/CardWithImage.astro';
 
 <style>
 	main {
-		margin: 10px auto auto auto;
+		margin-top: 10px;
 		padding: 1.5rem;
 		max-width: 60ch;
 	}
@@ -674,6 +356,7 @@ import CardWithImage from '../components/CardWithImage.astro';
 		display: flex;
 		width: 100% !important;
 		padding: 0 !important;
+		justify-content: center;
 	}
  
 
@@ -689,15 +372,21 @@ import CardWithImage from '../components/CardWithImage.astro';
 
 	}
 
-	@media (max-width: 768px){
+	@media (max-width: 550px){
 		.content {
-			flex-grow: 1;
-			max-width: 40ch !important;
+			max-width: 45ch !important;
+			
 		}
+	}
 
+	@media (max-width: 425px){
+		.content {
+			max-width: 43ch !important;
+			
+		}
+	}
 
 	
-	}
 
 	.main-page{
 		width: 100%;
@@ -718,10 +407,19 @@ import CardWithImage from '../components/CardWithImage.astro';
 		}
 
 	.logo{
+		display: flex;
+		width: 90%;
+		justify-items: center;
 		object-fit: contain;
 	}
 
 	.card-image .card-image-size{
+		display: flex !important;
+		justify-content: center;
+		justify-self: center;
+		justify-items: center;
+	}
+	.card-image {
 		display: flex !important;
 		justify-content: center;
 		justify-self: center;

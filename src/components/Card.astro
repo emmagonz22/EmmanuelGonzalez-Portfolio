@@ -6,10 +6,10 @@ export interface Props {
 	subtitle?: string;
 	body: string; 
 	date?: string;
-
+	
 }
 
-const { id, href="", title, subtitle, body, date} = Astro.props;
+const { id, title, subtitle, body, date} = Astro.props;
 ---
 
 <!-- 
@@ -22,8 +22,6 @@ const { id, href="", title, subtitle, body, date} = Astro.props;
 
 
 <div class="card" id={id}>
-
-	<a href={href}></a>
 	<div class="card-content">
 	  <div class="media">
 		<div class="media-content">
@@ -57,4 +55,9 @@ const { id, href="", title, subtitle, body, date} = Astro.props;
 	.media-content{
 		overflow: hidden;
 	}
+
+	.title{
+		height: 29px;
+	}
+	
 </style>
