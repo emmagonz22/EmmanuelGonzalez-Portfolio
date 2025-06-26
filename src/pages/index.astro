@@ -5,9 +5,7 @@ import Navigation from '../components/Navigation.astro';
 import MobileNavigation from '../components/MobileNavigation.astro';
 import Card from '../components/Card.astro';
 import ProgrammingSkills from '../components/ProgrammingSkills.astro';
-import CardFooter from '../components/CardFooter.astro';
 import 'bulma/css/bulma.css';
-import CardWithImage from '../components/CardWithImage.astro';
 import Footer from '../components/Footer.astro';
 import WorkExperience from '../components/WorkExperience.astro';
 import ResearchExperience from '../components/ResearchExperience.astro';
@@ -21,7 +19,8 @@ import Achievements from '../components/Achievements.astro'
 
 	<div class="container">
 	
-		<Navigation />
+			<Navigation />
+
 			<div>
 			<main class="content">
 				
@@ -354,6 +353,7 @@ import Achievements from '../components/Achievements.astro'
 	}
 	.container {
 		display: flex;
+		flex-direction: column;
 		width: 100% !important;
 		padding: 0 !important;
 		justify-content: center;
@@ -361,10 +361,6 @@ import Achievements from '../components/Achievements.astro'
  
 
 	@media (min-width: 768px){
-		.content {
-			flex-grow: 1;
-			max-width: 90ch !important;
-		}
 
 		.to-top-btn{
 			display: none;
@@ -372,39 +368,29 @@ import Achievements from '../components/Achievements.astro'
 
 	}
 
-	@media (max-width: 550px){
-		.content {
-			max-width: 45ch !important;
-			
-		}
-	}
 
-	@media (max-width: 425px){
-		.content {
-			max-width: 43ch !important;
-			
-		}
+	.content {
+		flex-grow: 1;
+		width:  100%;
 	}
-
-	
 
 	.main-page{
 		width: 100%;
 	}
 
 	.to-top-btn {
-			position: fixed !important;
-			bottom: 2em;
-			right: 2em;
-			width: 40px;
-			height: 40px;
-			z-index: 99;
-			border-radius: 50%;
-			display: none !important; 
-			justify-content: center !important; 
-			align-items: center; 
-			background-color: rgba(var(--primary)) !important;
-		}
+		position: fixed !important;
+		bottom: 2em;
+		right: 2em;
+		width: 40px;
+		height: 40px;
+		z-index: 99;
+		border-radius: 50%;
+		display: none !important; 
+		justify-content: center !important; 
+		align-items: center; 
+		background-color: rgba(var(--primary)) !important;
+	}
 
 	.logo{
 		display: flex;
