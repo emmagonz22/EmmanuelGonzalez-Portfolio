@@ -1,35 +1,8 @@
-# Emmanuel Gonzalez's Web Portfolio built in Astro Starter
+<div align="center">
 
-## 🚀 Project Structure
+Emmanuel Gonzalez's Web Portfolio
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-│   └── favicon.svg
-├── assets/
-│   └── (All images)
-│   └── emmanueljgonzalezmoralesresume.pdf
-├── src/
-│   ├── components/
-│   │   └── About.astro
-│   │   └── Card.astro
-│   │   └── CardFooter.astro                        
-│   │   └── CardWithImage.astro
-│   │   └── MobileNavigation.astro
-│   │   └── Navigation.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   ├── env.d.ts
-│   └── pages/
-│       └── error.astro
-│       └── index.astro
-├── package-lock.json
-└── package.json
-```
-
-Any static assets, like images, can be placed in the `public/` directory.
+</div>
 
 ## Commands
 
