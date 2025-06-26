@@ -1,1 +1,86 @@
 @import "tailwindcss";
+
+main {
+}
+h1 {
+    font-size: 2em;
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: 800;
+    margin: 0;
+    padding: 1.5rem;
+}
+.sub-title{
+    
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100% !important;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.content {
+    flex-grow: 1;
+    width:  100%;
+}
+
+
+@media (min-width: 768px){
+    .to-top-btn{
+        display: none;
+    }
+}
+
+
+.to-top-btn {
+    position: fixed !important;
+    bottom: 2em;
+    right: 2em;
+    width: 40px;
+    height: 40px;
+    z-index: 99;
+    border-radius: 50%;
+    display: none !important; 
+    justify-content: center !important; 
+    align-items: center; 
+    background-color: rgba(var(--primary)) !important;
+}
+
+.logo{
+    display: flex;
+    width: 90%;
+    justify-items: center;
+    object-fit: contain;
+}
+
+.card-image .card-image-size{
+    display: flex !important;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+}
+.card-image {
+    display: flex !important;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+}
+
+.text-gradient {
+    background-image: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+}
+
+.text-gradient {
+    background-image: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+}
