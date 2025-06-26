@@ -1,21 +1,24 @@
-<nav class="navbar mobile-nav is-black">
- 
-    <div class="navbrand" id="navback">
-      <a role="button" class="navbar-burger" class="table-content-navbar" aria-label="menu" aria-expanded="false" id="open-table" href="#">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-      </a>
-    </div>
-  
 
-  <div class="navbar-menu" id="navbarMenuWrapper">
-    <div class="navbar-start" id="navbarMenu">
-      <a class="navbar-item item" href="#about">About</a>
-      <a class="navbar-item item" href="#education">Education</a>
-      <a class="navbar-item item" href="#skills">Skills</a>
-      <a class="navbar-item item" href="#worke">Work Experience</a>
-      <a class="navbar-item item" href="#workr">Research Experience</a>
-      <a class="navbar-item item" href="#projects">Projects</a>
-      <a class="navbar-item item" href="#achi">Achievements</a>
+---
+---
+
+<nav class="mobile-nav">
+ 
+  <div class="navbrand" id="navback">
+    <a role="button" class="menu-toggle" aria-label="menu" aria-expanded="false" id="open-table" href="#">
+      <i class="fa fa-bars icon-style" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <div class="nav-menu" id="navbarMenuWrapper">
+    <div class="nav-menu-items" id="navbarMenu">
+      <a class="nav-item" href="/">About</a>
+      <a class="nav-item" href="education">Education</a>
+      <a class="nav-item" href="skills">Skills</a>
+      <a class="nav-item" href="workexperience">Work Experience</a>
+      <a class="nav-item" href="researchexperience">Research Experience</a>
+      <a class="nav-item" href="projects">Projects</a>
+      <a class="nav-item" href="achievements">Achievements</a>
     </div>
   </div>
 </nav>
@@ -60,7 +63,6 @@
   
 <style> 
 
-
 .mobile-nav {
   display: flex;
   width: 100%;
@@ -71,19 +73,14 @@
   position: absolute;
   top: 0;
   left: 0;
-  }
+}
 
 
 .navbrand {
   display: flex;
   position: fixed;
   top: 15px;
-  right: 40px;
-  /*
-  left: 50%;
-  transform: translateX(-50%);
-  width: 85%;
-  */
+  right: 15px;
   width: 40px;
   height: 40px;
   align-items: center;
@@ -95,41 +92,28 @@
   outline: none;
 }
 
-.menu-title {
-  height: 100%;
-  display: flex;
-  margin-left: 15px;
-  margin-top: -1px;
-  align-items: end;
-
-}
 .text-gradient {
-    font-family: "Ubuntu", sans-serif;
-		background-image: var(--primary-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
+  font-family: "Ubuntu", sans-serif;
+  background-image: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400%;
+  background-position: 0%;
+}
 
-.table-content-navbar {
+.menu-toggle {
   display: flex;
   position: fixed;
-  top: 10px;
-  right: 40px;
   height: 40px !important;
   width: 40px !important;
   justify-content: center;
   align-items: center;
   border-radius: 100px;
   z-index: 1000 !important;
+  cursor: pointer;
 }
 
-.navbar-burger{
-  border-radius: 100px !important;
-}
-
-.navbar-menu {
+.nav-menu {
   position: fixed;
   top: 0;
   left: 0;
@@ -168,10 +152,7 @@
   }
 }
 
-.navbar.is-black{
-  background-color: transparent;
-}
-.navbar-menu.is-active {
+.nav-menu.is-active {
   animation: slideInFromLeft 0.8s ease forwards;
   display: flex; 
   opacity: 1;  
@@ -180,9 +161,10 @@
   z-index: 995;
 }
 
-.navbar-menu:not(.is-active) {
+.nav-menu:not(.is-active) {
   animation: slideOutToLeft 0.8s ease forwards;
 }
+
 .navbar-start {
   flex-direction: column;
   text-align: center;
@@ -190,16 +172,37 @@
   align-content: space-evenly;
 }
 
-.navbar-item {
+.nav-menu-items {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  width: 100%;
+  height: 100%; 
+  padding: 8px 16px;
+  align-content: space-evenly;
+  justify-content: center;
+}
+
+
+
+.nav-item {
   color: white;
-  font-size: 20px;
+  font-size: 24px;
   margin: 10px;
   text-decoration: none;
   font-family: "Ubuntu", sans-serif;
+  text-align: end;
 }
 
-.navbar-item:hover {
+
+.nav-item:hover{
+  opacity: 0.8;
   color: rgb(225, 225, 225);
+}
+
+.nav-item:active{
+  opacity: 0.8;
+  color: rgb(var(--primary));
 }
 
 
@@ -210,17 +213,8 @@
 
 }
 
-/* Optional: Transition effect for smooth menu opening */
-.navbar-menu {
-  transition: all 0.3s ease;
-  opacity: 0;
-  visibility: hidden;
+.icon-style {
+  color: rgb(var(--primary));
 }
-
-.navbar-menu.is-active {
-  opacity: 1;
-  visibility: visible;
-}
-
     
 </style>

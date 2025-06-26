@@ -40,6 +40,9 @@ const { id, href="#", title, subtitle, body, img_src, img_alt, date } = Astro.pr
 
 
 <style>
+	.card{
+		width: 100%;
+	}
 	.link-card {
 		list-style: none;
 		display: flex;
@@ -68,14 +71,6 @@ const { id, href="#", title, subtitle, body, img_src, img_alt, date } = Astro.pr
 	.logo{
 		object-fit: contain;
 		max-height: 500px;
-		/*
-		max-width: 500px;
-		max-height: 500px;
-		display: flex !important;
-		justify-content: center;
-		justify-self: center;
-		justify-items: center;
-		*/
 	}
 	h2 {
 		margin: 0;
@@ -95,7 +90,7 @@ const { id, href="#", title, subtitle, body, img_src, img_alt, date } = Astro.pr
 		color: rgb(var(--primary));
 	}
 
-	.card-image .card-image-size{
+	.card-image{
 		display: flex !important;
 		justify-content: center;
 		justify-self: center;

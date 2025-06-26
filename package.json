@@ -10,14 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@picocss/pico": "^1.5.10",
-    "animejs": "^3.2.1",
-    "astro": "^2.8.0",
-    "bulma": "^1.0.2",
-    "devicon": "^2.16.0"
+    "@tailwindcss/vite": "^4.1.10",
+    "astro": "^5.10.1",
+    "devicon": "^2.16.0",
+    "tailwindcss": "^4.1.10"
   },
   "devDependencies": {
-    "@types/animejs": "^3.1.7",
     "sass": "^1.79.3"
   }
 }

@@ -1,8 +1,12 @@
 ---
-
 import Card from '../components/Card.astro';
 import 'devicon/devicon.min.css';
+import Layout from '../layouts/Layout.astro';
 ---
+<Layout title='Skills'>
+
+
+    <h1 class="sub-title" id="skills"><span class="text-gradient">Skills</span></h1>
 
     <Card 
         title='Programming Languages:' 
@@ -15,7 +19,7 @@ import 'devicon/devicon.min.css';
             </div>
 
 
-             <div class="programming-logo-container"> 
+            <div class="programming-logo-container"> 
                 <i class="devicon-typescript-plain colored programming-logo-i"></i>
                 <span class="programming-logo-text"> TypeScript </span> 
             </div>
@@ -36,7 +40,7 @@ import 'devicon/devicon.min.css';
                 <span class="programming-logo-text"> C </span> 
             </div>
 
-             <div class="programming-logo-container"> 
+            <div class="programming-logo-container"> 
                 <i class="devicon-cplusplus-plain colored programming-logo-i"></i>
                 <span class="programming-logo-text"> C++ </span> 
             </div>
@@ -53,7 +57,7 @@ import 'devicon/devicon.min.css';
                 <img class="programming-logo-style" src="/assets/logos/js_logo.svg" alt="JavaScript Logo"/>
                 <span class="programming-logo-text"> JavaScript </span> 
             </div>
-               
+            
             <div class="programming-logo-container"> 
                 <img class="programming-logo-style" src="/assets/logos/ts_logo.svg" alt="TypeScript Logo"/>
                 <span class="programming-logo-text"> TypeScript </span> 
@@ -69,7 +73,7 @@ import 'devicon/devicon.min.css';
                 <span class="programming-logo-text"> C </span> 
             </div>
 
-               <div class="programming-logo-container"> 
+            <div class="programming-logo-container"> 
                 <img class="programming-logo-style" src="/assets/logos/cplusplus_logo.svg" alt="C++ Logo"/>
                 <span class="programming-logo-text"> C++ </span> 
             </div>
@@ -80,6 +84,39 @@ import 'devicon/devicon.min.css';
         id='pl'
     />
 
+    <Card title='Frameworks:' 
+	body={`<ul>
+		<li style="margin-left: 20px;">Angular</li>
+		<li style="margin-left: 20px;">Astro</li>
+		<li style="margin-left: 20px;">Spring Boot</li>
+		<li style="margin-left: 20px;">Flask</li>
+	</ul>
+	`}
+	id='frameworks'/>
+
+	<Card title='Technologies:' 
+	body= {`<ul>
+		<li style="margin-left: 20px;">HTML5/CSS3</li>
+		<li style="margin-left: 20px;">Git</li>
+		<li style="margin-left: 20px;">PostgreSQL</li>
+		<li style="margin-left: 20px;">Terminal/Bash</li>
+		<li style="margin-left: 20px;">Linux</li>
+		<li style="margin-left: 20px;">Google Cloud Storage(GCS)</li>
+		<li style="margin-left: 20px;">CRUD</li>
+		<li style="margin-left: 20px;">SCRUM</li>
+		<li style="margin-left: 20px;">LaTex</li>
+		<li style="margin-left: 20px;">Docker</li>
+	</ul>`}
+	id='tech'/>
+
+	<Card title='Languages:' 
+	body={`<ul>
+		<li style="margin-left: 20px;">English</li>
+		<li style="margin-left: 20px;">Spanish</li>
+	</ul>
+	`}
+	id='lan'/>
+</Layout>
 <style is:global>
 
     .programming-logo-style{

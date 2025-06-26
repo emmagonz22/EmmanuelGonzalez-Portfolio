@@ -1,0 +1,74 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout title="Education">
+    <h1 class="sub-title" id="education"><span class="text-gradient">Education</span></h1>
+
+	<div class="card">
+
+		<div class="info-container info-container-content" id="uprm"> 
+
+			<div class="info-container-title"> <strong> University of Puerto Rico Mayaguez Campus </strong> <div><strong style="text-align: end;">Exp Grad: May 2025</strong></div></div>
+			<div class="info-location">Mayaguez, PR </div>
+			<div class="info-gpa"><strong>GPA: 3.48</strong> </div>
+			<br>
+
+			Course work: Database, OS, Computer Networks, Data Structure & Algorithms, Software Design/Testing/Requirements, Algorithm Design, Computer Architecture
+			
+		</div>
+
+	</div>
+
+	<div class="card">
+	<div class="info-container" id="techx"> 
+		<div class="info-container-title"> <strong>Google Tech Exchange</strong> <div>Jan 2023 - May 2023</div></div>
+		<div class="info-location">Location: Online </div>
+		<br>
+
+		<div class="card-image">
+			
+			<img class="logo" src="/assets/tech_exchange_logo.png" alt="Google Tech Exchange">
+			
+		</div>
+
+		Course work: Applied Data Structure, Software Development Studio, Careers in Tech
+	</div>
+	</div>
+</Layout>
+
+<style>
+    .info-container {
+		line-height: 1.6;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--primary), 25%);
+		background-color: white;
+		padding: 1rem;
+		border-radius: 0.4rem;
+	}
+	.info-container code {
+		font-size: 0.875em;
+		font-weight: bold;
+		background: rgba(var(--primary), 12%);
+		color: rgb(var(--primary));
+		border-radius: 4px;
+		padding: 0.3em 0.45em;
+	}
+	.info-container-title{
+		display: flex;
+		justify-content: space-between;
+		text-align: start;
+	}
+	.info-container strong {
+		color: rgb(var(--primary));
+	}
+	.info-location {
+		display: flex;
+		justify-content: end;
+	}
+	.info-gpa {
+		display: flex;
+		justify-content: end;
+	}
+</style>

@@ -13,7 +13,6 @@ Inside of your Astro project, you'll see the following folders and files:
 │   └── emmanueljgonzalezmoralesresume.pdf
 ├── src/
 │   ├── components/
-│   │   └── About.astro
 │   │   └── Card.astro
 │   │   └── CardFooter.astro                        
 │   │   └── CardWithImage.astro
